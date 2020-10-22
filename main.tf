@@ -23,9 +23,5 @@ locals {
 
 	workload_ou_names = ["Dev","Test","Prod","Sandbox","UnClass"]
 	workload_ous = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if contains(local.workload_ou_names, ou.name)]
-
-//	dev_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Dev"][0]
-//	test_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Test"][0]
-//	prod_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Prod"][0]
 }
 
