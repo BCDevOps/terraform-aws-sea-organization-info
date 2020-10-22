@@ -21,8 +21,11 @@ locals {
 	core_account_names = ["log-archive","Perimeter", "iam-security", "security", "shared-services", "SharedNetwork", "Operations"]
 	core_accounts = [ for account in local.non_master_accounts : account if contains(local.core_account_names, account.name)]
 
-	dev_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Dev"][0]
-	test_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Test"][0]
-	prod_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Prod"][0]
+	workload_ou_names = ["Dev","Test","Prod","Sandbox","UnClass"]
+	workload_ous = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if contains(local.workload_ou_names, ou.name)]
+
+//	dev_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Dev"][0]
+//	test_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Test"][0]
+//	prod_ou = [for ou in data.aws_organizations_organizational_units.org_ous.children : ou if ou.name == "Prod"][0]
 }
 

@@ -18,5 +18,5 @@ output "core_accounts" {
 }
 
 output "workload_ous" {
-	value = [local.dev_ou, local.test_ou, local.prod_ou]
+	value = local.workload_ous
 }
