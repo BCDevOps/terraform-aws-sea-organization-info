@@ -20,3 +20,7 @@ output "core_accounts" {
 output "workload_ous" {
 	value = local.workload_ous
 }
+
+output "workload_accounts" {
+	value = local.workload_accounts
+}
