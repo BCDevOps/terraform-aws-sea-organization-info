@@ -17,6 +17,42 @@ This repo provides a starting point for users who want to create valid Terraform
 # Documentation
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~>4.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~>4.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_organizations_organization.org_root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organization) | data source |
+| [aws_organizations_organizational_units.org_ous](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organizational_units) | data source |
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_core_accounts"></a> [core\_accounts](#output\_core\_accounts) | n/a |
+| <a name="output_master_account"></a> [master\_account](#output\_master\_account) | n/a |
+| <a name="output_root"></a> [root](#output\_root) | n/a |
+| <a name="output_workload_accounts"></a> [workload\_accounts](#output\_workload\_accounts) | n/a |
+| <a name="output_workload_ous"></a> [workload\_ous](#output\_workload\_ous) | n/a |
 <!-- END_TF_DOCS -->
 
 ## Getting Started
